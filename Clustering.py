@@ -198,7 +198,7 @@ def RP(points, kmax):
     	X_projected = inverse_transform_rp(rp, X_transformed, points)
     	reconstruction_error.append(((points - X_projected) ** 2).mean())
     
-    plt.plot(list(range(1, kmax+1)), kurt)
+    plt.plot(list(range(1, kmax+1)), reconstruction_error)
     plt.title('reconstruction_error-vs-k')
     plt.xlabel('k')
     plt.ylabel('reconstruction_error')
